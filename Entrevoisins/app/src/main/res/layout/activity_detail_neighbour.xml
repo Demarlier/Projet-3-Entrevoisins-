@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#EEEEEE"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.neighbour_list.DetailNeighbourActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/Activity_Toolbar_Details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints">
+
+
+        <ImageView
+            android:id="@+id/activity_detail_neighbour_avatar_picture"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp" />
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/activity_detail_neighbour_first_name"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="230dp"
+            android:text="Caroline"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view_one"
+            android:layout_width="411dp"
+            android:layout_height="169dp"
+            android:layout_below="@+id/activity_detail_neighbour_avatar_picture"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="4dp">
+
+            <TextView
+                android:id="@+id/detail_Card_Name"
+                android:layout_width="368dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Nom"
+                android:textColor="@android:color/black"
+                android:textSize="21sp"
+                android:layout_marginTop="15dp"
+                tools:layout_conversion_absoluteHeight="30dp"
+                tools:layout_conversion_absoluteWidth="411dp"
+                tools:layout_editor_absoluteX="-1dp"
+                tools:layout_editor_absoluteY="293dp" />
+
+            <ImageView
+                android:id="@+id/detail_home_card_img"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="55dp"
+                app:srcCompat="@drawable/ic_baseline_room_24"
+                tools:layout_conversion_absoluteHeight="49dp"
+                tools:layout_conversion_absoluteWidth="46dp"
+                tools:layout_editor_absoluteX="-1dp"
+                tools:layout_editor_absoluteY="293dp" />
+
+            <TextView
+                android:id="@+id/detail_home_card_text"
+                android:layout_width="354dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="55dp"
+                android:text="France"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/detail_tel_card_img"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="95dp"
+                app:srcCompat="@drawable/ic_baseline_phone_24"
+                tools:layout_conversion_absoluteHeight="49dp"
+                tools:layout_conversion_absoluteWidth="46dp"
+                tools:layout_editor_absoluteX="-1dp"
+                tools:layout_editor_absoluteY="293dp" />
+
+            <TextView
+                android:id="@+id/detail_tel_card_text"
+                android:layout_width="354dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="95dp"
+                android:text="06"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/detail_site_card_img"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="135dp"
+                app:srcCompat="@drawable/ic_baseline_language_24"
+                tools:layout_conversion_absoluteHeight="49dp"
+                tools:layout_conversion_absoluteWidth="46dp"
+                tools:layout_editor_absoluteX="-1dp"
+                tools:layout_editor_absoluteY="293dp" />
+
+            <TextView
+                android:id="@+id/detail_site_card_text"
+                android:layout_width="354dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="135dp"
+                android:text="www.site.com"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="411dp"
+            android:layout_height="130dp"
+            android:layout_below="@+id/card_view_one"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="15dp"
+            app:cardCornerRadius="4dp">
+
+            <TextView
+                android:id="@+id/detail_info"
+                android:layout_width="368dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="A propos de moi "
+                android:textColor="@android:color/black"
+                android:textSize="22sp"
+                android:layout_marginTop="15dp"
+                tools:layout_conversion_absoluteHeight="30dp"
+                tools:layout_conversion_absoluteWidth="411dp"
+                tools:layout_editor_absoluteX="-1dp"
+                tools:layout_editor_absoluteY="293dp" />
+
+            <TextView
+                android:id="@+id/detail_about_me"
+                android:layout_width="352dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="54dp"
+                android:layout_marginEnd="55dp"
+                android:text="Blablabla "
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                tools:layout_conversion_absoluteHeight="30dp"
+                tools:layout_conversion_absoluteWidth="411dp"
+                tools:layout_editor_absoluteX="-1dp"
+                tools:layout_editor_absoluteY="293dp" />
+
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fav_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/al_btn"
+            android:layout_marginStart="345dp"
+            android:layout_marginTop="270dp"
+            android:layout_marginEnd="12dp"
+            android:backgroundTint="@android:color/white"
+            app:srcCompat="@drawable/ic_baseline_star_24"
+            tools:ignore="UnknownId" />
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>
