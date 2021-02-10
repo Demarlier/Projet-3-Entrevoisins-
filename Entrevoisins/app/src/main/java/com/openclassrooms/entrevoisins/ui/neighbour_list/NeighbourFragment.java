@@ -28,7 +28,7 @@ public class NeighbourFragment extends Fragment {
     private NeighbourApiService mApiService;
     private List<Neighbour> mNeighbours;
     private RecyclerView mRecyclerView;
-    private FragmentType mKeyWord;
+    private FragmentType mFragmentType;
 
 
     /**
@@ -37,7 +37,7 @@ public class NeighbourFragment extends Fragment {
      */
     public static NeighbourFragment newInstance(FragmentType fragmentType) {
         Bundle bundle = new Bundle();
-        bundle.putInt("keyWord", fragmentType.ordinal());
+        bundle.putInt("fragmentType", fragmentType.ordinal());
         NeighbourFragment fragment = new NeighbourFragment();
         fragment.setArguments(bundle);
         return fragment;
@@ -47,7 +47,7 @@ public class NeighbourFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mApiService = DI.getNeighbourApiService();
-        mKeyWord = FragmentType.values()[getArguments().getInt("keyWord")];
+        mFragmentType = FragmentType.values()[getArguments().getInt("fragmentType")];
     }
 
     @Override
@@ -69,7 +69,7 @@ public class NeighbourFragment extends Fragment {
         mRecyclerView.setAdapter(new MyNeighbourRecyclerViewAdapter(mNeighbours));
         List<Neighbour> mDisplayList = new ArrayList<>();
 
-        if (mKeyWord.equals(FragmentType.FAVORITES)){
+        if (mFragmentType.equals(FragmentType.FAVORITES)){
             mDisplayList = mApiService.getNeighboursFavorite();
         } else {
             mDisplayList = mApiService.getNeighbours();
