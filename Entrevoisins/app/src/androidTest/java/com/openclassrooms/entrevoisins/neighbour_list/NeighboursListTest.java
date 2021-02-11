@@ -105,9 +105,9 @@ public class NeighboursListTest {
                         childAtPosition(
                                 allOf(withId(R.id.Activity_Toolbar_Details),
                                         childAtPosition(
-                                                withClassName(is("android.support.constraint.ConstraintLayout")),
+                                                withClassName(is("android.widget.ScrollView")),
                                                 0)),
-                                5),
+                                3),
                         isDisplayed()));
         favoriteButton.perform(click());
 
@@ -116,7 +116,7 @@ public class NeighboursListTest {
                         childAtPosition(
                                 allOf(withId(R.id.Activity_Toolbar_Details),
                                         childAtPosition(
-                                                withClassName(is("android.support.constraint.ConstraintLayout")),
+                                                withClassName(is("android.widget.ScrollView")),
                                                 0)),
                                 1),
                         isDisplayed()));

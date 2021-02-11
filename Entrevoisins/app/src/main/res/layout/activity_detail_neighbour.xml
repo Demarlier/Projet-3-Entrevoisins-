@@ -2,9 +2,9 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#EEEEEE"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EEEEEE"
     tools:context=".ui.neighbour_list.DetailNeighbourActivity">
 
 
@@ -14,201 +14,206 @@
         android:fillViewport="true"
         tools:ignore="MissingConstraints">
 
-    <RelativeLayout
-        android:id="@+id/Activity_Toolbar_Details"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints">
-
-
-        <ImageView
-            android:id="@+id/activity_detail_neighbour_avatar_picture"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:scaleType="centerCrop"
-            tools:src="@tools:sample/avatars"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="0dp" />
-
-        <ImageButton
-            android:id="@+id/back_btn"
-            android:layout_width="50dp"
-            android:layout_height="45dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="10dp"
-            android:background="#00FFFFFF"
-            app:srcCompat="@drawable/ic_baseline_arrow_back_24"
-            tools:visibility="visible" />
-
-        <TextView
-            android:id="@+id/activity_detail_neighbour_first_name"
+        <RelativeLayout
+            android:id="@+id/Activity_Toolbar_Details"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="230dp"
-            tools:src="@tools:sample/first_names"
-            android:textColor="@android:color/white"
-            android:textSize="30sp" />
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints">
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/card_view_one"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/activity_detail_neighbour_avatar_picture"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginTop="12dp"
-            app:cardCornerRadius="4dp">
+
+            <ImageView
+                android:id="@+id/activity_detail_neighbour_avatar_picture"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:scaleType="centerCrop"
+                tools:src="@tools:sample/avatars" />
+
+
+            <ImageButton
+                android:id="@+id/back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:background="#00FFFFFF"
+                app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+                tools:visibility="visible" />
+
 
             <TextView
-                android:id="@+id/detail_Card_Name"
+                android:id="@+id/activity_detail_neighbour_first_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                tools:src="@tools:sample/first_names"
-                android:textColor="@android:color/black"
-                android:textSize="21sp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="230dp"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                tools:src="@tools:sample/first_names" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fav_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_detail_neighbour_avatar_picture"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="false"
+                android:layout_centerVertical="false"
+                android:layout_marginTop="-25dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="-25dp"
+                android:backgroundTint="@android:color/white"
+                app:srcCompat="@drawable/ic_baseline_star_24" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fav_btn"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="4dp">
+
+                <TextView
+                    android:id="@+id/detail_Card_Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="21sp"
+                    tools:layout_conversion_absoluteHeight="30dp"
+                    tools:layout_conversion_absoluteWidth="411dp"
+                    tools:layout_editor_absoluteX="-1dp"
+                    tools:layout_editor_absoluteY="293dp"
+                    tools:src="@tools:sample/first_names" />
+
+                <ImageView
+                    android:id="@+id/detail_home_card_img"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="55dp"
+                    app:srcCompat="@drawable/ic_baseline_room_24"
+                    tools:layout_conversion_absoluteHeight="49dp"
+                    tools:layout_conversion_absoluteWidth="46dp"
+                    tools:layout_editor_absoluteX="-1dp"
+                    tools:layout_editor_absoluteY="293dp" />
+
+                <TextView
+                    android:id="@+id/detail_home_card_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginTop="55dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    tools:src="@tools:sample/cities" />
+
+                <ImageView
+                    android:id="@+id/detail_tel_card_img"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="95dp"
+                    app:srcCompat="@drawable/ic_baseline_phone_24"
+                    tools:layout_conversion_absoluteHeight="49dp"
+                    tools:layout_conversion_absoluteWidth="46dp"
+                    tools:layout_editor_absoluteX="-1dp"
+                    tools:layout_editor_absoluteY="293dp" />
+
+                <TextView
+                    android:id="@+id/detail_tel_card_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginTop="95dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    tools:src="@tools:sample/us_phones" />
+
+                <ImageView
+                    android:id="@+id/detail_site_card_img"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="135dp"
+                    app:srcCompat="@drawable/ic_baseline_language_24"
+                    tools:layout_conversion_absoluteHeight="49dp"
+                    tools:layout_conversion_absoluteWidth="46dp"
+                    tools:layout_editor_absoluteX="-1dp"
+                    tools:layout_editor_absoluteY="293dp" />
+
+                <TextView
+                    android:id="@+id/detail_site_card_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginTop="135dp"
+                    android:text="www.site.com"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_view_one"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="15dp"
-                tools:layout_conversion_absoluteHeight="30dp"
-                tools:layout_conversion_absoluteWidth="411dp"
-                tools:layout_editor_absoluteX="-1dp"
-                tools:layout_editor_absoluteY="293dp" />
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="30dp"
+                app:cardCornerRadius="4dp">
 
-            <ImageView
-                android:id="@+id/detail_home_card_img"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="55dp"
-                app:srcCompat="@drawable/ic_baseline_room_24"
-                tools:layout_conversion_absoluteHeight="49dp"
-                tools:layout_conversion_absoluteWidth="46dp"
-                tools:layout_editor_absoluteX="-1dp"
-                tools:layout_editor_absoluteY="293dp" />
+                <TextView
+                    android:id="@+id/detail_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="A propos de moi "
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"
+                    tools:layout_conversion_absoluteHeight="30dp"
+                    tools:layout_conversion_absoluteWidth="411dp"
+                    tools:layout_editor_absoluteX="-1dp"
+                    tools:layout_editor_absoluteY="293dp" />
 
-            <TextView
-                android:id="@+id/detail_home_card_text"
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="55dp"
-                tools:src="@tools:sample/cities"
-                android:textColor="@android:color/black"
-                android:textSize="14sp" />
-
-            <ImageView
-                android:id="@+id/detail_tel_card_img"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="95dp"
-                app:srcCompat="@drawable/ic_baseline_phone_24"
-                tools:layout_conversion_absoluteHeight="49dp"
-                tools:layout_conversion_absoluteWidth="46dp"
-                tools:layout_editor_absoluteX="-1dp"
-                tools:layout_editor_absoluteY="293dp" />
-
-            <TextView
-                android:id="@+id/detail_tel_card_text"
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="95dp"
-                tools:src="@tools:sample/us_phones"
-                android:textColor="@android:color/black"
-                android:textSize="14sp" />
-
-            <ImageView
-                android:id="@+id/detail_site_card_img"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="135dp"
-                app:srcCompat="@drawable/ic_baseline_language_24"
-                tools:layout_conversion_absoluteHeight="49dp"
-                tools:layout_conversion_absoluteWidth="46dp"
-                tools:layout_editor_absoluteX="-1dp"
-                tools:layout_editor_absoluteY="293dp" />
-
-            <TextView
-                android:id="@+id/detail_site_card_text"
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="135dp"
-                android:text="www.site.com"
-                android:textColor="@android:color/black"
-                android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/detail_about_me"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="54dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    tools:layout_conversion_absoluteHeight="30dp"
+                    tools:layout_conversion_absoluteWidth="411dp"
+                    tools:layout_editor_absoluteX="-1dp"
+                    tools:layout_editor_absoluteY="293dp"
+                    tools:text="@tools:sample/lorem/random" />
 
 
-        </android.support.v7.widget.CardView>
+            </android.support.v7.widget.CardView>
 
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/card_view_one"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginTop="15dp"
-            app:cardCornerRadius="4dp">
-
-            <TextView
-                android:id="@+id/detail_info"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:text="A propos de moi "
-                android:textColor="@android:color/black"
-                android:textSize="22sp"
-                android:layout_marginTop="15dp"
-                tools:layout_conversion_absoluteHeight="30dp"
-                tools:layout_conversion_absoluteWidth="411dp"
-                tools:layout_editor_absoluteX="-1dp"
-                tools:layout_editor_absoluteY="293dp" />
-
-            <TextView
-                android:id="@+id/detail_about_me"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="54dp"
-                tools:text="@tools:sample/lorem/random"
-                android:textColor="@android:color/black"
-                android:textSize="14sp"
-                tools:layout_conversion_absoluteHeight="30dp"
-                tools:layout_conversion_absoluteWidth="411dp"
-                tools:layout_editor_absoluteX="-1dp"
-                tools:layout_editor_absoluteY="293dp" />
-
-
-        </android.support.v7.widget.CardView>
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fav_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="15dp"
-            android:layout_alignBottom="@+id/al_btn"
-            android:backgroundTint="@android:color/white"
-            app:srcCompat="@drawable/ic_baseline_star_24"
-            tools:ignore="UnknownId" />
-
-
-    </RelativeLayout> </ScrollView>
+        </RelativeLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
